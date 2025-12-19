@@ -40,22 +40,9 @@
         <div class="mb-3">
             <label class="form-label">Estado *</label>
             <select name="estado_cita" class="form-select" required>
-                <option value="CANCELO"
-                    {{ old('estado_cita', $cita->estado_cita) == 'CANCELO' ? 'selected' : '' }}>
-                    CANCELO
-                </option>
-
-                <option value="PENDIENTE"
-                    {{ old('estado_cita', $cita->estado_cita) == 'PENDIENTE' ? 'selected' : '' }}>
-                    PENDIENTE
-                </option>
-
-                <option value="YA VINO"
-                    {{ old('estado_cita', $cita->estado_cita) == 'YA VINO' ? 'selected' : '' }}>
-                    YA VINO
-                </option>
-
-
+                <option value="PENDIENTE" {{$cita->estado_cita === 'PENDIENTE' ? 'selected' : '' }}>PENDIENTE</option>
+                <option value="YA VINO" {{$cita->estado_cita === 'YA VINO' ? 'selected' : '' }}>YA VINO</option>
+                <option value="CANCELO" {{$cita->estado_cita === 'CANCELO' ? 'selected' : '' }}>CANCELO</option>
             </select>
         </div>
 
