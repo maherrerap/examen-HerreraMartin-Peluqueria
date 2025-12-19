@@ -1,7 +1,7 @@
-# Tarea - Desarrollo en Plataformas
+# Examen - Desarrollo en Plataformas
 
 **Estudiante:** Martín Alejandro Herrera Pacheco  
-**Fecha:** 2025/12/16  
+**Fecha:** 2025/12/19  
 **Paralelo:** Quinto Semestre – P9932
 
 ---
@@ -10,24 +10,25 @@
 
 ### 1. Tabla
 
-**Nombre de la tabla:** `Vehiculos`
+**Nombre de la tabla:** `Citas`
 
 **Campos:**
 
-| Campo         | Tipo            | ¿Obligatorio? |
-|--------------|-----------------|---------------|
-| id           | Bigint (integer) | Sí            |
-| placa        | VARCHAR(10)      | Sí            |
-| tipo         | VARCHAR(20)      | Sí            |
-| propietario  | VARCHAR(100)     | No            |
-| observaciones| TEXT            | No            |
-| estado       | CHAR(10)         | Sí            |
+| Campo               | Tipo             | ¿Obligatorio? |
+|---------------------|------------------|---------------|
+| id                  | Bigint (integer) | Sí            |
+| nombre_clienta      | VARCHAR(50)      | Sí            |
+| telefono_clienta    | VARCHAR(10)      | Sí            |
+| servicio_solicitado | VARCHAR(30)      | Si            |
+| fecha_cita          | TIMESTAMP        | Si            |
+| estado_cita         | VARCHAR(3)       | Si            |
+| fecha_asignada      | TIMESTAMP        | Sí            |
 
 ---
 
-### 2. Tipos de vehículo
+### 2. Estados de Servicio
 
-Los tipos de vehículos registrados son los siguientes: Automóvil, Motocicleta y Camioneta.
+Los estados de servicio son: PENDIENTE, YA VINO, CANCELO
 
 ---
 
@@ -36,4 +37,7 @@ Los tipos de vehículos registrados son los siguientes: Automóvil, Motocicleta 
 **Respuesta:** No, no se puede eliminar registros.
 
 **Razón (1 línea):**  
-Es para mantener un historial de vehículos que visitaron el parqueadero para seguridad del dueño.
+Es para mantener un historial de citas atendidas en la peluqueria con el objetivo de tener trazabilidad ante cualquier reclamo.
+
+### 4. Link de GitHub
+https://github.com/maherrerap/examen-HerreraMartin-Peluqueria.git
